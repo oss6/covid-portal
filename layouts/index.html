@@ -76,24 +76,33 @@
     <div class="row">
       <div class="col-md mx-3 mb-2">
         <div class="row"><h5>{{ $.Param "teststats.npctitle" }}</h5></div>
-        <div class="row"><div id="npc"></div></div>
+        <div class="row">
+          <!-- <div id="npc"></div> -->
+          <canvas id="npc"></canvas>
+        </div>
         <div class="row"><a href="{{ if eq $.Site.Language.LanguageName "Svenska" }}/sv{{ end}}/data_types/health_data/npc-statistics/">{{ $.Param "teststats.seemoretext" }} <i class="fas fa-arrow-circle-right"></i></a></div>
       </div>
       <div class="col-md mx-3 mb-2">
         <div class="row"><h5>{{ $.Param "teststats.serologytitle" }}</h5></div>
-        <div class="row"><div id="serology"></div></div>
+        <div class="row">
+          <!-- <div id="serology"></div> -->
+          <canvas id="serology"></canvas>
+        </div>
         <div class="row"><a href="{{ if eq $.Site.Language.LanguageName "Svenska" }}/sv{{ end}}/data_types/health_data/serology-statistics/">{{ $.Param "teststats.seemoretext" }} <i class="fas fa-arrow-circle-right"></i></a></div>
       </div>
     </div>
   </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.12.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
 
 <script src="https://datagraphics.dckube.scilifelab.se/graphic/e4c6a7b8bff648a5adaabbdd3d994bf9.js?id=serology"></script>
-<script src="https://datagraphics.dckube.scilifelab.se/graphic/4889dfd3392f4dc7a2e7f579f1cc95bf.js?id=npc"></script>
+<script src="https://datagraphics.dckube.scilifelab.se/graphic/4889dfd3392f4dc7a2e7f579f1cc95bf.js?id=npc"></script> -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="/js/data-graphics.js"></script>
 
 {{ end }}
